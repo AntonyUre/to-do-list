@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* borrar esto */
+  background-color: #03ba9e;
+  height: 100vh;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+header {
+  width: 100%;
+  align-self: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  color: inherit;
+  background: #049b84;
+  margin-bottom: 40px;
+}
+.wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+}
+
+.container {
+  margin: auto;
+  width: 350px;
+  height: 400px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: default;
+}
+
+.title {
+  width: 100%;
+  height: 25%;
+  background: #4ea395;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addSection {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  position: relative;
+}
+
+.taskInput {
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid #dbdbdb;
+  outline: none;
+}
+
+.add {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  right: 0;
+  background-color: #4eadb9;
+  position: absolute;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add:hover {
+  background-color: #279b8b;
+}
+
+.list {
+  width: 100%;
+  height: 60%;
+  padding: 0 10px 10px 10px;
+  overflow: auto;
+  color: rgb(63, 63, 63);
+}
+
+/* DOM Elements */
+.taskContainer {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 5px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.task {
+  width: 170px;
+}
+i.fas.fa-check,
+i.fas.fa-trash-alt {
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+i.fas.fa-check:hover {
+  color: #0c9463;
+}
+i.fas.fa-trash-alt:hover {
+  color: #ff0000;
+}
+i.fas.fa-check:active {
+  transform: translateY(3px);
+}
+i.fas.fa-trash-alt:active {
+  transform: translateY(3px);
+}
+.taskContainer:hover i.fas.fa-check,
+.taskContainer:hover i.fas.fa-trash-alt {
+  opacity: 1;
+}
+
+/* FOOTER */
+footer {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background: #049b84;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: rgba(0, 121, 235, 0);
+}
